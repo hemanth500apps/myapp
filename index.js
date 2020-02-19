@@ -20,8 +20,6 @@ function createWindow() {
     });
 }
 
-
-
 app.on('ready', () => {
     createWindow();
 });
@@ -43,6 +41,7 @@ ipcMain.on('app_version', (event) => {
 });
 
 autoUpdater.on('update-available', () => {
+    console.log('helloSS')
     mainWindow.webContents.send('update_available');
 });
 autoUpdater.on('update-downloaded', () => {

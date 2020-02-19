@@ -30,9 +30,9 @@
 </head>
 
 <body>
-    <h1>I Love BotPath</h1>
+    <h1>BotPath</h1>
     <p id="version"></p>
-    <div id="notification" class="hidden">
+    <div id="notification" class="hidd1en">
         <p id="message"></p>
         <button id="close-button" onClick="closeNotification()">
             Close
@@ -55,6 +55,7 @@
         const message = document.getElementById('message');
         const restartButton = document.getElementById('restart-button');
         ipcRenderer.on('update_available', () => {
+            console.log('update is available')
             ipcRenderer.removeAllListeners('update_available');
             message.innerText = 'A new update is available. Downloading now...';
             notification.classList.remove('hidden');
