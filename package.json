@@ -1,6 +1,6 @@
 {
   "name": "myapp",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "my test app for auto update of electron",
   "main": "index.js",
   "scripts": {
